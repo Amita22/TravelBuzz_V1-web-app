@@ -31,12 +31,18 @@ export class LoginComponent implements OnInit {
 
  }
  
- Signup(Signupform:NgForm){
-   console.log(Signupform.value);
-   this.loginService.userSignUp(Signupform.value);
-   //this.router.navigate['/choice'];
+//  Signup(Signupform:NgForm){
+//    console.log(Signupform.value);
+//    this.loginService.userSignUp(Signupform.value);
+//    //this.router.navigate['/choice'];
 
-   }
+//    }
+
+next(){
+  this.router.navigate(['/signup'])
+}
+
+
  SignIn(loginform:NgForm){
      this.loginService.userSignIn(loginform.value);
    }

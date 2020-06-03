@@ -4,6 +4,10 @@ const bodyparser = require('body-parser');
 const app = express();
 const authcontroller = require('../controller/authController');
 const placesController = require('../controller/placesController');
+const places1Controller = require('../controller/places1Controller');
+const placecardController = require('../controller/placecardController');
+const hotelController = require('../controller/hotelController');
+const feedbackController=require('../controller/feedbackController');
 //const cartController = require('../controller/cartController');
 
 app.use(bodyparser.json());
@@ -18,6 +22,10 @@ app.use((req, res, next) => {
 
 app.use('/auth', authcontroller);
 app.use('/places', placesController);
+app.use('/places1', places1Controller);
+app.use('/placecard', placecardController);
+app.use('/hotel', hotelController);
+app.use('/feedbacks',feedbackController)
 //app.use('/cart', cartController);
 app.get('/', (req, res, next) => {
    res.status(200).json({

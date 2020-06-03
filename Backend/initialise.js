@@ -12,6 +12,7 @@ const router = express.Router();
 
 const usersSchema = require('./model/userModel')
 mongoose.connect('mongodb+srv://amita:5SxAq8ihvbuN0WIv@cluster1-dm6iy.mongodb.net/travelbuzz?retryWrites=true/E-tourism');
+//mongoose.connect('mongodb://amita:5SxAq8ihvbuN0WIv@cluster1-shard-00-00-dm6iy.mongodb.net:27017,cluster1-shard-00-01-dm6iy.mongodb.net:27017,cluster1-shard-00-02-dm6iy.mongodb.net:27017/test?ssl=true&replicaSet=Cluster1-shard-0&authSource=admin&retryWrites=true/E-tourism');
 
 var hash = bcrypt.hashSync("admin", saltRounds);
 var userJson = {
